@@ -1,0 +1,24 @@
+Compilar: Fonte -> Compilado -> Objeto -> Lincador -> Executavel
+
+Interpretador: Fonte -> converte linguagem de maquina
+
+Criar pasta: mkdir "nome_da_pasta" 
+Abrir pasta criada: code . (abre uma nova janela da pasta criada para o Typscript)
+
+
+Começar entendendo como funciona o trasnpilador.
+
+const mensagem: string
+
+tsc meuPrimeiroTs.js
+	tsc é o comando do TypeScript Compile (compilador de Typscript).
+	Após executar este comando, o compilador Typescript cria um arquivo JavaScritp correspondente com o mesmo nome, mas com a extensão .js.
+	O arquivo JavaScript gerado sera executavel em ambientes que suportam JavaScript, como navegadores ou o Node.js.
+
+
+tsc -w gera arquivos .js correspondentes ao arquivos .ts. O tsc -w fica persistindo o TRANSPILADOR ou seja qualquer alteração salva no arquivo .ts, sera atualizada automaticamente no seu arquivo .js correspondente
+
+Declaração de variaveis:
+	const: const x : number = 10  | valor constante, imutavel. 
+	var (tem escopo global):
+	let (tem escopo de função ou bloco):
