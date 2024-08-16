@@ -10,6 +10,5 @@ var maisUm = numberInt + 1;
 var maisDois = numberInt + 2;
 
 console.log("O número digitado foi " + numberInt + 
-            " e seus dois antecessores são " + menosUm + " e " + menosdois +
-            ". Já seus dois sucessores são " + maisUm + " e " + maisDois + "."
-)
+            " e seus dois antecessores são " + (numberInt-2) + " e " + (numberInt-1) +
+            ". Já seus dois sucessores são " + (numberInt+1) + " e " + (numberInt+2) + ". ");
