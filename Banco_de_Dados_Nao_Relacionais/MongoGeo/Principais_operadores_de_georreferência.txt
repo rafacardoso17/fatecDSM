@@ -1,0 +1,35 @@
+Lista com os principais operadores de georreferência disponíveis no MongoDB, usando GeoJSON:
+
+1. **$geoWithin**  
+   - Descrição: Seleciona os documentos com valores de pontos geoespaciais dentro de uma geometria especificada.  
+   - Uso: `{"location": {"$geoWithin": {"$geometry": <GeoJSON object>}}}`
+
+2. **$geoIntersects**  
+   - Descrição: Seleciona documentos que têm geometrias que intersectam com uma geometria especificada.  
+   - Uso: `{"location": {"$geoIntersects": {"$geometry": <GeoJSON object>}}}`
+
+3. **$near**  
+   - Descrição: Retorna os documentos ordenados pela proximidade a um ponto especificado. Esse operador pode ser usado com índices geoespaciais 2dsphere ou 2d.  
+   - Uso: `{"location": {"$near": {"$geometry": <GeoJSON point>, "$maxDistance": <distance in meters>}}}`
+
+4. **$nearSphere**  
+   - Descrição: Similar ao `$near`, mas calcula as distâncias esféricas, ou seja, leva em consideração a curvatura da Terra.  
+   - Uso: `{"location": {"$nearSphere": {"$geometry": <GeoJSON point>, "$maxDistance": <distance in meters>}}}`
+
+5. **$center**  
+   - Descrição: Define uma área circular utilizando um centro e um raio, em coordenadas planas (2D). Usado com índices geoespaciais 2d.  
+   - Uso: `{"location": {"$geoWithin": {"$center": [ [<x>, <y>], <radius> ]}}}`
+
+6. **$centerSphere**  
+   - Descrição: Define uma área circular esférica utilizando um centro e um raio em radianos. Usado com índices geoespaciais 2dsphere.  
+   - Uso: `{"location": {"$geoWithin": {"$centerSphere": [ [<x>, <y>], <radius in radians> ]}}}`
+
+7. **$box**  
+   - Descrição: Define uma área retangular usando dois pontos (canto inferior esquerdo e canto superior direito), em coordenadas planas. Usado com índices geoespaciais 2d.  
+   - Uso: `{"location": {"$geoWithin": {"$box": [ [<bottomLeftX>, <bottomLeftY>], [<topRightX>, <topRightY>] ]}}}`
+
+8. **$polygon**  
+   - Descrição: Define uma área poligonal usando uma lista de pontos que formam um polígono. Usado com índices geoespaciais 2d.  
+   - Uso: `{"location": {"$geoWithin": {"$polygon": [ [<x1>, <y1>], [<x2>, <y2>], ... ]}}}`
+
+Esses operadores são utilizados para consultas geoespaciais em MongoDB, permitindo buscas avançadas em documentos que contenham dados de localização em formato GeoJSON.
