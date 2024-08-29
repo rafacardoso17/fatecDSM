@@ -1,0 +1,29 @@
+Aqui estão as explicações detalhadas para cada uma das sentenças mencionadas em aula. Essas explicações são voltadas para iniciantes e ajudarão a entender melhor os conceitos abordados.
+
+### 1. **Para o trabalho local é necessário ter um servidor**
+   - **Explicação**: Quando você desenvolve uma aplicação web localmente, precisa de um servidor para simular como a aplicação funcionaria na internet. O servidor é um software que hospeda os arquivos do seu projeto e serve esses arquivos para o navegador quando ele faz uma requisição. No caso do Angular, o `ng serve` inicia um servidor de desenvolvimento local, que permite visualizar e testar sua aplicação enquanto você a desenvolve.
+
+### 2. **Cliente é quem faz a requisição; Servidor é quem processa a requisição**
+   - **Explicação**: Em um ambiente web, o "cliente" geralmente se refere ao navegador ou qualquer outro software que o usuário utiliza para acessar a aplicação. Quando o cliente precisa de alguma informação ou serviço, ele faz uma "requisição" ao servidor, que é a máquina (ou software) que processa essa requisição. O servidor então responde com os dados ou recursos solicitados, como uma página HTML, um arquivo JSON, etc.
+
+### 3. **No Angular o servidor carrega na porta 4200: localhost: 4200**
+   - **Explicação**: Quando você roda o comando `ng serve` no Angular, ele inicia um servidor de desenvolvimento local na porta 4200. O `localhost` refere-se ao seu próprio computador, e `4200` é o número da porta que o servidor usa para se comunicar com o navegador. Assim, você acessa sua aplicação em `http://localhost:4200/` no seu navegador.
+
+### 4. **Roteamento**
+   - **Explicação**: No Angular, o roteamento é o processo de navegar entre diferentes "rotas" ou URLs dentro da aplicação. Cada rota pode carregar um componente ou uma página diferente sem precisar recarregar a página inteira. Isso é essencial em aplicações de página única (SPAs), pois permite uma navegação fluida e rápida. O Angular possui um módulo de roteamento (`RouterModule`) que gerencia essas rotas.
+
+### 5. **Angular utiliza Single Page Application (SPA)**
+   - **Explicação**: O termo Single Page Application (SPA) refere-se a um tipo de aplicação web onde a página inteira não é recarregada quando você navega entre diferentes partes do site. Em vez disso, o conteúdo é carregado dinamicamente por meio de JavaScript, resultando em uma experiência de usuário mais rápida e suave. O Angular facilita a criação de SPAs ao gerenciar a navegação e as atualizações de conteúdo sem a necessidade de recarregar a página.
+
+### 6. **Conceito de diretiva no Angular: são anotações, possível manipular**
+   - **Explicação**: Diretivas no Angular são instruções especiais no código HTML que podem alterar o comportamento ou o layout dos elementos HTML. Elas podem ser usadas para manipular o DOM (Document Object Model), aplicar estilos, ou até mesmo criar componentes reutilizáveis. Existem três tipos principais de diretivas: estruturais (como `*ngIf` e `*ngFor`), de atributo (como `[ngClass]` e `[ngStyle]`), e as diretivas customizadas, que você pode criar para estender a funcionalidade do HTML.
+
+### 7. **Comandos para a instalação do Angular e verificação de versão**
+   - **Explicação**:
+     - **Instalação do Angular CLI**: Para instalar o Angular CLI, você usa o comando `npm install -g @angular/cli`. O `-g` significa que a instalação será global, ou seja, o Angular CLI estará disponível em qualquer lugar do sistema.
+     - **Verificação de versão**: Para verificar se a instalação foi bem-sucedida e qual versão está instalada, você pode usar o comando `ng version`. Este comando também exibe outras informações úteis, como a versão do Angular e do TypeScript.
+
+### 8. **Como criar uma aplicação no Angular, como funciona a criação**
+   - **Explicação**: Para criar uma nova aplicação Angular, você usa o comando `ng new nome-do-projeto`. Isso cria uma estrutura básica de diretórios e arquivos para a aplicação, incluindo tudo o que você precisa para começar, como arquivos de configuração, componentes iniciais, e o ambiente de desenvolvimento. Durante a criação, você pode escolher opções como se deseja adicionar roteamento e qual pré-processador de CSS deseja usar. Depois que a aplicação é criada, você pode rodá-la localmente com `ng serve` e começar a desenvolver suas funcionalidades.
+
+Essas explicações devem ajudar a solidificar o entendimento dos conceitos que foram abordados na sua aula. Se tiver mais dúvidas ou precisar de mais detalhes, estou aqui para ajudar!
