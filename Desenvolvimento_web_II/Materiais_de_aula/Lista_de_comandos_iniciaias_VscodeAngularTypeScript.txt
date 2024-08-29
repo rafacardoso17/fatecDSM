@@ -1,0 +1,50 @@
+Compreendo que você está começando a trabalhar com Angular e TypeScript, e é importante ter uma base sólida para iniciar com o pé direito. Vou te fornecer uma lista de comandos iniciais que você vai utilizar com frequência no desenvolvimento Angular, usando o VS Code no Debian.
+
+### 1. **Criar um Novo Projeto Angular**
+   - **Comando**: `ng new nome-do-projeto`
+   - **Explicação**: Este comando cria um novo projeto Angular. O `ng` é a CLI (Interface de Linha de Comando) do Angular, e `new` indica que você está criando um novo projeto. Você pode seguir as instruções na linha de comando para escolher opções como o uso de roteamento e o estilo CSS.
+
+### 2. **Rodar o Servidor de Desenvolvimento**
+   - **Comando**: `ng serve`
+   - **Explicação**: Este comando compila o projeto e inicia um servidor de desenvolvimento local. Normalmente, ele fica acessível em `http://localhost:4200/`. O código será automaticamente recarregado a cada mudança.
+
+### 3. **Gerar um Componente**
+   - **Comando**: `ng generate component nome-do-componente`
+   - **Atalho**: `ng g c nome-do-componente`
+   - **Explicação**: Gera um novo componente Angular. O componente é uma parte independente da interface do usuário, com seu próprio HTML, CSS, e lógica em TypeScript.
+
+### 4. **Gerar um Serviço**
+   - **Comando**: `ng generate service nome-do-serviço`
+   - **Atalho**: `ng g s nome-do-serviço`
+   - **Explicação**: Cria um serviço Angular. Os serviços são usados para lógica de negócios, como fazer chamadas HTTP para uma API ou compartilhar dados entre componentes.
+
+### 5. **Gerar um Módulo**
+   - **Comando**: `ng generate module nome-do-módulo`
+   - **Atalho**: `ng g m nome-do-módulo`
+   - **Explicação**: Cria um novo módulo Angular. Módulos organizam o código em blocos reutilizáveis e podem conter componentes, serviços, e outros módulos.
+
+### 6. **Construir o Projeto para Produção**
+   - **Comando**: `ng build --prod`
+   - **Explicação**: Este comando cria uma versão otimizada do seu projeto, pronta para ser implantada em um servidor. O código é minificado e otimizado para melhor performance.
+
+### 7. **Testar o Projeto**
+   - **Comando**: `ng test`
+   - **Explicação**: Executa os testes unitários do projeto usando o framework de testes configurado (normalmente o Jasmine e o Karma). Isso é útil para garantir que seu código está funcionando como esperado.
+
+### 8. **Verificar a Versão do Angular CLI**
+   - **Comando**: `ng version`
+   - **Explicação**: Exibe a versão do Angular CLI instalada no seu ambiente, além das versões do Angular, TypeScript e outras dependências.
+
+### 9. **Adicionar uma Nova Dependência**
+   - **Comando**: `npm install nome-da-dependência`
+   - **Explicação**: Instala uma nova dependência no seu projeto. O `npm` é o gerenciador de pacotes que acompanha o Node.js, e ele é utilizado para instalar bibliotecas adicionais que seu projeto possa precisar.
+
+### 10. **Verificar Código com Linter**
+   - **Comando**: `ng lint`
+   - **Explicação**: Verifica o código do projeto de acordo com as regras definidas no linter configurado (geralmente o TSLint ou ESLint). Isso ajuda a manter a qualidade e a consistência do código.
+
+### Outras Dicas para o VS Code
+- **Formatar Código**: No VS Code, você pode formatar o código usando `Shift + Alt + F`.
+- **Extensões Úteis**: Certifique-se de instalar extensões como *Angular Language Service* e *TSLint* para melhorar a experiência de desenvolvimento.
+
+Esses comandos iniciais te darão uma boa base para começar a trabalhar com Angular e TypeScript. Com o tempo, você se familiarizará com mais funcionalidades e comandos conforme seu projeto crescer. Boa sorte na aula!
