@@ -3,7 +3,8 @@ const fs = require('fs')
 
 // Lê o conteúdo do arquivo "municipios.json" na pasta "json" e o armazena na variável 'dadosMunicipios'.
 // O método readFileSync lê o arquivo de forma síncrona, ou seja, o código aguarda até que a leitura esteja completa antes de continuar.
-const dadosMunicipios = fs.readFileSync("json/municipios.json")
+const dadosMunicipios = fs.readFileSync("C:/Users/r17ca/Documents/Faculdade/fatecDSM/Banco_de_Dados_Nao_Relacionais/MongoGeo/json/municipios.json");
+
 
 // Converte o conteúdo lido (que está em formato de string) em um objeto JavaScript usando JSON.parse().
 // A variável 'jsonMunicipios' agora contém os dados do arquivo "municipios.json" como um array de objetos ou um objeto.
