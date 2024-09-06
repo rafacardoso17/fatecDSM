@@ -1,0 +1,183 @@
+Aqui está o levantamento atualizado das suas dúvidas e soluções, agora relacionando com os arquivos que você criou e utilizou para aprender comandos no TypeScript.
+
+---
+
+### 1. **Erro ao inicializar `tsconfig.json`**
+
+**Problema:**  
+Você tentou rodar `tsc --init`, mas o arquivo `tsconfig.json` já existia, gerando um erro.
+
+**Solução:**  
+O erro ocorreu porque o arquivo já estava presente no diretório. O correto é editar o arquivo existente, sem tentar recriá-lo.  
+Arquivo relacionado: `tsconfig.json`
+
+---
+
+### 2. **Tipagem incorreta de arrays no TypeScript**
+
+**Problema:**  
+Você tentou adicionar valores de diferentes tipos em um array sem definir corretamente a tipagem, causando erro ao tentar adicionar elementos.
+
+**Solução:**  
+Use tipagem correta para evitar erros. Defina um tipo específico como `Array<string>` ou `Array<number>`. Se for necessário adicionar múltiplos tipos, utilize a união de tipos.
+
+Exemplo de arquivo onde o problema foi trabalhado:
+- `addNaArray.ts` / `addNaArray.js`
+
+---
+
+### 3. **Erro ao usar `require('prompt-sync')`**
+
+**Problema:**  
+Ao importar o módulo `prompt-sync` com `import`, ocorreu um erro dizendo que o módulo só poderia ser importado com a flag `esModuleInterop`.
+
+**Solução:**  
+A flag `esModuleInterop` estava habilitada no arquivo `tsconfig.json`, permitindo a importação correta de módulos CommonJS. Alternativamente, a importação com `require()` também funcionaria.
+
+Arquivos relacionados:
+- `tipandoNumeroParaString.ts` / `tipandoNumeroParaString.js`
+
+---
+
+### 4. **Solicitar entrada de usuário e adicionar à Array**
+
+**Problema:**  
+Você queria capturar números do usuário e adicioná-los a um array, mas os valores digitados desapareciam após a reinicialização do código.
+
+**Solução:**  
+O problema ocorre porque a execução do código reinicia a array sempre que o programa é rodado. Para persistência, seria necessário algum tipo de armazenamento, como arquivos ou banco de dados. Durante a execução do código em uma sessão, o código atualizado resolve o problema.
+
+Exemplo de arquivo onde o problema foi abordado:
+- `declareArrayDe1a10.ts` / `declareArrayDe1a10.js`
+
+---
+
+### 5. **Erro na soma de números em uma função**
+
+**Problema:**  
+Ao capturar dois números como entrada do usuário, a função de soma tratava os números como strings, gerando erros.
+
+**Solução:**  
+A solução foi converter as entradas de string para número usando `parseFloat()` ou `parseInt()`.
+
+Arquivos relacionados:
+- `leiaDoisNumeros.ts` / `leiaDoisNumeros.js`
+
+---
+
+### 6. **Flag `esModuleInterop` para importar módulos CommonJS**
+
+**Problema:**  
+Ao tentar importar o módulo `prompt-sync` com `import`, foi gerado um erro que pedia a habilitação da flag `esModuleInterop`.
+
+**Solução:**  
+A flag já estava habilitada no arquivo `tsconfig.json`, e o erro foi resolvido sem grandes alterações. O problema foi solucionado ao garantir que a flag correta estivesse presente e configurada.
+
+Arquivo relacionado:  
+- `tsconfig.json`
+
+---
+
+### Diretório com todos os arquivos mencionados:
+```
+rafael@rafael-x510ur:~/Documentos/Repositories/fatecDSM/Desenvolvimento_web_II/EstudandoTypescript$
+addNaArray.js         declareArrayDe1a10.js  enumHeterogeneos.js   knowTuples.js      meuprimeiro.js  tipandoNumeroParaString.js  Union.js
+addNaArray.ts         declareArrayDe1a10.ts  enumHeterogeneos.ts   knowTuples.ts      meuprimeiro.ts  tipandoNumeroParaString.ts  Union.ts
+Any.js                enum.js                enumTipoString.js     leiaDoisNumeros.js node_modules    tsconfig.json
+Any.ts                enum.ts                enumTipoString.ts     leiaDoisNumeros.ts package.json
+```
+
+---
+
+Essas dúvidas foram levantadas enquanto você aprendia e praticava o uso de TypeScript, trabalhando diretamente com os arquivos nesse diretório. Cada problema foi associado a um arquivo específico que você criou para aprender os diferentes conceitos e comandos.Aqui está o levantamento atualizado das suas dúvidas e soluções, agora relacionando com os arquivos que você criou e utilizou para aprender comandos no TypeScript.
+
+---
+
+### 1. **Erro ao inicializar `tsconfig.json`**
+
+**Problema:**  
+Você tentou rodar `tsc --init`, mas o arquivo `tsconfig.json` já existia, gerando um erro.
+
+**Solução:**  
+O erro ocorreu porque o arquivo já estava presente no diretório. O correto é editar o arquivo existente, sem tentar recriá-lo.  
+Arquivo relacionado: `tsconfig.json`
+
+---
+
+### 2. **Tipagem incorreta de arrays no TypeScript**
+
+**Problema:**  
+Você tentou adicionar valores de diferentes tipos em um array sem definir corretamente a tipagem, causando erro ao tentar adicionar elementos.
+
+**Solução:**  
+Use tipagem correta para evitar erros. Defina um tipo específico como `Array<string>` ou `Array<number>`. Se for necessário adicionar múltiplos tipos, utilize a união de tipos.
+
+Exemplo de arquivo onde o problema foi trabalhado:
+- `addNaArray.ts` / `addNaArray.js`
+
+---
+
+### 3. **Erro ao usar `require('prompt-sync')`**
+
+**Problema:**  
+Ao importar o módulo `prompt-sync` com `import`, ocorreu um erro dizendo que o módulo só poderia ser importado com a flag `esModuleInterop`.
+
+**Solução:**  
+A flag `esModuleInterop` estava habilitada no arquivo `tsconfig.json`, permitindo a importação correta de módulos CommonJS. Alternativamente, a importação com `require()` também funcionaria.
+
+Arquivos relacionados:
+- `tipandoNumeroParaString.ts` / `tipandoNumeroParaString.js`
+
+---
+
+### 4. **Solicitar entrada de usuário e adicionar à Array**
+
+**Problema:**  
+Você queria capturar números do usuário e adicioná-los a um array, mas os valores digitados desapareciam após a reinicialização do código.
+
+**Solução:**  
+O problema ocorre porque a execução do código reinicia a array sempre que o programa é rodado. Para persistência, seria necessário algum tipo de armazenamento, como arquivos ou banco de dados. Durante a execução do código em uma sessão, o código atualizado resolve o problema.
+
+Exemplo de arquivo onde o problema foi abordado:
+- `declareArrayDe1a10.ts` / `declareArrayDe1a10.js`
+
+---
+
+### 5. **Erro na soma de números em uma função**
+
+**Problema:**  
+Ao capturar dois números como entrada do usuário, a função de soma tratava os números como strings, gerando erros.
+
+**Solução:**  
+A solução foi converter as entradas de string para número usando `parseFloat()` ou `parseInt()`.
+
+Arquivos relacionados:
+- `leiaDoisNumeros.ts` / `leiaDoisNumeros.js`
+
+---
+
+### 6. **Flag `esModuleInterop` para importar módulos CommonJS**
+
+**Problema:**  
+Ao tentar importar o módulo `prompt-sync` com `import`, foi gerado um erro que pedia a habilitação da flag `esModuleInterop`.
+
+**Solução:**  
+A flag já estava habilitada no arquivo `tsconfig.json`, e o erro foi resolvido sem grandes alterações. O problema foi solucionado ao garantir que a flag correta estivesse presente e configurada.
+
+Arquivo relacionado:  
+- `tsconfig.json`
+
+---
+
+### Diretório com todos os arquivos mencionados:
+```
+rafael@rafael-x510ur:~/Documentos/Repositories/fatecDSM/Desenvolvimento_web_II/EstudandoTypescript$
+addNaArray.js         declareArrayDe1a10.js  enumHeterogeneos.js   knowTuples.js      meuprimeiro.js  tipandoNumeroParaString.js  Union.js
+addNaArray.ts         declareArrayDe1a10.ts  enumHeterogeneos.ts   knowTuples.ts      meuprimeiro.ts  tipandoNumeroParaString.ts  Union.ts
+Any.js                enum.js                enumTipoString.js     leiaDoisNumeros.js node_modules    tsconfig.json
+Any.ts                enum.ts                enumTipoString.ts     leiaDoisNumeros.ts package.json
+```
+
+---
+
+Essas dúvidas foram levantadas enquanto você aprendia e praticava o uso de TypeScript, trabalhando diretamente com os arquivos nesse diretório. Cada problema foi associado a um arquivo específico que você criou para aprender os diferentes conceitos e comandos.

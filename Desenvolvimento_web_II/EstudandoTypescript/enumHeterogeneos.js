@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiaHeterogeneoSemana = void 0;
+var DiaHeterogeneoSemana;
+(function (DiaHeterogeneoSemana) {
+    DiaHeterogeneoSemana["Domingo"] = "Domingo";
+    DiaHeterogeneoSemana[DiaHeterogeneoSemana["Segunda"] = 2] = "Segunda";
+    DiaHeterogeneoSemana[DiaHeterogeneoSemana["Terca"] = 3] = "Terca";
+    DiaHeterogeneoSemana[DiaHeterogeneoSemana["Quarta"] = 4] = "Quarta";
+    DiaHeterogeneoSemana[DiaHeterogeneoSemana["Quinta"] = 5] = "Quinta";
+    DiaHeterogeneoSemana[DiaHeterogeneoSemana["Sexta"] = 6] = "Sexta";
+    DiaHeterogeneoSemana[DiaHeterogeneoSemana["Sabado"] = 17] = "Sabado";
+})(DiaHeterogeneoSemana || (exports.DiaHeterogeneoSemana = DiaHeterogeneoSemana = {}));
+console.log(DiaHeterogeneoSemana.Domingo);
+console.log(DiaHeterogeneoSemana['Domingo']);
+console.log(DiaHeterogeneoSemana['Terca']);
+console.log(DiaHeterogeneoSemana[2]);
+console.log(DiaHeterogeneoSemana['Quarta']);
+console.log(DiaHeterogeneoSemana['Quinta']);
+console.log(DiaHeterogeneoSemana['Sexta']);
+console.log(DiaHeterogeneoSemana['Sabado']);
+console.log(DiaHeterogeneoSemana['Domingo']);

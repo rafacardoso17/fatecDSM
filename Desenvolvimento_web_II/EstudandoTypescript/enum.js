@@ -1,0 +1,40 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiaDaSemanaPassandoValorInicial = exports.DiaDaSemanaSemPassarNumeros = exports.DiaDaSemanaPassandoNumeros = void 0;
+var DiaDaSemanaPassandoNumeros;
+(function (DiaDaSemanaPassandoNumeros) {
+    DiaDaSemanaPassandoNumeros[DiaDaSemanaPassandoNumeros["Dom"] = 1] = "Dom";
+    DiaDaSemanaPassandoNumeros[DiaDaSemanaPassandoNumeros["Seg"] = 2] = "Seg";
+    DiaDaSemanaPassandoNumeros[DiaDaSemanaPassandoNumeros["Ter"] = 3] = "Ter";
+    DiaDaSemanaPassandoNumeros[DiaDaSemanaPassandoNumeros["Qua"] = 4] = "Qua";
+    DiaDaSemanaPassandoNumeros[DiaDaSemanaPassandoNumeros["Qui"] = 5] = "Qui";
+    DiaDaSemanaPassandoNumeros[DiaDaSemanaPassandoNumeros["Sex"] = 6] = "Sex";
+    DiaDaSemanaPassandoNumeros[DiaDaSemanaPassandoNumeros["Sab"] = 7] = "Sab";
+})(DiaDaSemanaPassandoNumeros || (exports.DiaDaSemanaPassandoNumeros = DiaDaSemanaPassandoNumeros = {}));
+var DiaDaSemanaSemPassarNumeros;
+(function (DiaDaSemanaSemPassarNumeros) {
+    DiaDaSemanaSemPassarNumeros[DiaDaSemanaSemPassarNumeros["Dom"] = 0] = "Dom";
+    DiaDaSemanaSemPassarNumeros[DiaDaSemanaSemPassarNumeros["Seg"] = 1] = "Seg";
+    DiaDaSemanaSemPassarNumeros[DiaDaSemanaSemPassarNumeros["Ter"] = 2] = "Ter";
+    DiaDaSemanaSemPassarNumeros[DiaDaSemanaSemPassarNumeros["Qua"] = 3] = "Qua";
+    DiaDaSemanaSemPassarNumeros[DiaDaSemanaSemPassarNumeros["Qui"] = 4] = "Qui";
+    DiaDaSemanaSemPassarNumeros[DiaDaSemanaSemPassarNumeros["Sex"] = 5] = "Sex";
+    DiaDaSemanaSemPassarNumeros[DiaDaSemanaSemPassarNumeros["Sab"] = 6] = "Sab";
+})(DiaDaSemanaSemPassarNumeros || (exports.DiaDaSemanaSemPassarNumeros = DiaDaSemanaSemPassarNumeros = {}));
+var DiaDaSemanaPassandoValorInicial;
+(function (DiaDaSemanaPassandoValorInicial) {
+    DiaDaSemanaPassandoValorInicial[DiaDaSemanaPassandoValorInicial["Dom"] = 11] = "Dom";
+    DiaDaSemanaPassandoValorInicial[DiaDaSemanaPassandoValorInicial["Seg"] = 12] = "Seg";
+    DiaDaSemanaPassandoValorInicial[DiaDaSemanaPassandoValorInicial["Ter"] = 13] = "Ter";
+    DiaDaSemanaPassandoValorInicial[DiaDaSemanaPassandoValorInicial["Qua"] = 14] = "Qua";
+    DiaDaSemanaPassandoValorInicial[DiaDaSemanaPassandoValorInicial["Qui"] = 15] = "Qui";
+    DiaDaSemanaPassandoValorInicial[DiaDaSemanaPassandoValorInicial["Sex"] = 16] = "Sex";
+    DiaDaSemanaPassandoValorInicial[DiaDaSemanaPassandoValorInicial["Sab"] = 17] = "Sab";
+})(DiaDaSemanaPassandoValorInicial || (exports.DiaDaSemanaPassandoValorInicial = DiaDaSemanaPassandoValorInicial = {}));
+console.log(DiaDaSemanaPassandoNumeros);
+console.log(DiaDaSemanaSemPassarNumeros);
+console.log(DiaDaSemanaPassandoValorInicial);
+let acessarDia = DiaDaSemanaPassandoNumeros[7];
+let acessoDiaNumero = DiaDaSemanaPassandoValorInicial[11];
+let acessoDiaString = DiaDaSemanaPassandoValorInicial['Seg'];
+console.log(acessarDia + "  ####  " + acessoDiaNumero + "  ####  " + acessoDiaString);
