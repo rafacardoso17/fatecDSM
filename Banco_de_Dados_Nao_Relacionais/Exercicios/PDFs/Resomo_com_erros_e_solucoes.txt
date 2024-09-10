@@ -1,0 +1,35 @@
+Resumo (com problemas e soluções):
+fs.readFileSync: Lê um arquivo JSON de forma síncrona.
+
+Problema: Um erro de caminho inválido foi identificado ao tentar carregar o arquivo. O erro ENOENT: no such file or directory surgiu porque o caminho do arquivo estava incorreto.
+Solução: Ajustar o caminho do arquivo para usar barras / ou barras duplas \\ em caminhos no Windows, garantindo que o arquivo seja localizado corretamente.
+JSON.parse: Converte o conteúdo JSON para um objeto JavaScript.
+
+Sem problemas nessa parte, desde que o JSON lido esteja formatado corretamente.
+use(): Troca o banco de dados ativo no MongoDB.
+
+insertMany(): Insere múltiplos documentos na coleção.
+
+Problema: Falta de informações detalhadas sobre os erros de inserção pode ocorrer, como quando existem documentos duplicados (se houver um índice único).
+Solução: Caso ocorra um erro de duplicação ao inserir, o uso de índices únicos, como em createIndex, ajuda a garantir que valores duplicados sejam evitados. Revise os dados para garantir que os campos indexados estejam únicos.
+find() e limit(): Busca documentos e limita o número de resultados retornados.
+
+Sem problemas aqui, o uso correto desses métodos permite controlar o retorno de dados e a quantidade de documentos exibidos.
+count(): Conta o número total de documentos correspondentes.
+
+createIndex(): Cria um índice no campo especificado, com a opção de torná-lo único.
+
+Sem problemas aqui, mas ao aplicar um índice único, pode causar falhas ao tentar inserir documentos duplicados.
+updateOne() com $set: Atualiza um documento com base no filtro e usa $set para modificar ou adicionar campos.
+
+Problema: Ao criar coordenadas de localização (local.coordinates), o problema era que os campos de longitude e latitude não estavam corretamente atribuídos.
+Solução: A correção foi feita para usar o caminho correto do campo de coordenadas, acessando os valores de endereço.coord[0] (longitude) e endereço.coord[1] (latitude).
+forEach() e $unset: Itera sobre os documentos e remove campos.
+
+Problema: O erro Update document requires atomic operators surgiu porque o operador $unset não estava precedido pelo símbolo $ e o identificador do documento _id foi digitado incorretamente como _if.
+Solução: O uso correto de $unset e a correção de _id no filtro de atualização resolveram o problema.
+Conclusão: As principais dificuldades foram relacionadas a:
+
+Erros de caminho do arquivo.
+Sintaxe incorreta em operadores atômicos do MongoDB.
+Atribuição incorreta de coordenadas geográficas.
