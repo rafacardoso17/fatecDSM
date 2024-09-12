@@ -1,13 +1,14 @@
+"use strict";
 function calc(x, y) {
-    return "resultado: ".concat(x + y);
+    return `resultado: ${x + y}`;
 }
 // poderia ser também
 function calcMsg(x, y, msg) {
-    return "".concat(msg, " ").concat(x + y);
+    return `${msg} ${x + y}`;
 }
-var resultado;
+let resultado;
 resultado = calc(10, 15);
 console.log(resultado);
-var resultadoMsg;
+let resultadoMsg;
 resultado = calcMsg(10, 23, "O resultado é igual a ");
 console.log(resultado);

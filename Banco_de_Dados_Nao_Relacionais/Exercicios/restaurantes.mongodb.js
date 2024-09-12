@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 // Lê o arquivo 'restaurantes.json' da pasta especificada. O segundo argumento 'utf8' garante que o conteúdo seja lido como texto.
-const dadosRestaurante = fs.readFileSync("C:/Users/r17ca/Documents/Faculdade/fatecDSM/Banco_de_Dados_Nao_Relacionais/Exercicios/json/restaurantes.json", 'utf8');
+const dadosRestaurante = fs.readFileSync("/home/rafael/Documentos/Repositories/fatecDSM/Banco_de_Dados_Nao_Relacionais/Exercicios/json/restaurantes.json", 'utf8');
 
 // Converte o conteúdo lido do arquivo (que está em formato JSON) em um objeto JavaScript, permitindo manipulação no código.
 const jsonRestaurantes = JSON.parse(dadosRestaurante);

@@ -1,3 +1,4 @@
+"use strict";
 function verificandoTipo(x) {
     if (typeof x === "string") {
         return true;
