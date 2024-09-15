@@ -1,0 +1,65 @@
+Modelagem de Dados no Não Relacional
+
+ ________  * id		
+|Palestra| - titulo
+----------
+    | 
+    |
+  <Item> (1,1)
+    |
+    | 
+____________  * cpf		
+|Palestrante| - nome
+------------
+
+Abordagem:
+	1- Referencia documentos 
+	
+		//Collection Palestra
+			[
+			{
+			   _id: 123,
+			   titulo: "MongoDb"
+			 }
+			]
+		 
+		 
+		 //Collection Palestrante
+		 	[
+		 	{
+		 	cpf: "123.456.789-01",
+            nome: "José Alves",
+            idPalestra: 123
+            }
+            ]
+
+    2- Aninhar documentos
+    
+    [{
+        _id:123,
+        titulo: "MOngoDb",
+        palestrante: {
+            cpf: "123.456.789-01",
+            nome: "José Alves"
+        }
+    }]
+
+
+    1 - N
+
+____________  * id	
+|  Produto | - nome
+------------  - preço
+    | 
+    |
+  <Item> (1,N)
+    |
+    | 
+____________  * id	
+|   Marca  | - descricao
+------------
+
+// S"eparar dados que são frequentemente acessados juntos, é um anti-padrão NoSQL
+
+// Kevin Ryan um dos criadores do MOngoDB
+

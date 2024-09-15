@@ -1,0 +1,25 @@
+Instruções
+Sabendo-se que a Teoria da Ação (Norman, 86) é composta pelos golfos: 
+• Execução: Formulação da Intenção, Especificação da Sequência de Ações, Execução. 
+• Avaliação: Percepção, Interpretação, Avaliação. 
+• Fazer a correlação entre as tarefas com as etapas dos golfos da execução e avaliação, para cada situação descrita a seguir: 
+1. Em um sistema de biblioteca, um usuário que queira fazer uma consulta sobre um livro. 
+	1.1. Golfo de Execução.
+		1.1.1 Formulação da intenção: O usuário precisa decidir ou já saber alguma informação do livro que deseja consultar. Isso deve fazer parte da intenção de descobrir a disponibilidade.
+		1.1.2 Especificação da sequência de ações: Com acesso ao sistema, o usuário identifica como realizar essa intenção dentro do sistema da biblioteca, como acessar o site, abrir o catalogo, inserir o titulo ou o autor do livro em uma barra de busca dentro do respectivo sistema.
+		1.1.3. Execução: O usuário digita o texto que deseja buscar (título, autor, etc.) no sistema da biblioteca e executa a ação de pesquisar clicando no botão "search", ou "buscar", ou apertando o botão "Enter".
+	1.2. Golfo de Avaliação.
+		1.2.1. Percepção o usuário recebe como feedback uma lista de resultados ou uma pagina com informações sobre o livro, incluindo informação de não encontrado, para caso a busca não tenha sucesso.  
+		1.2.2. Interpretação: O usuário interpreta as informações com base nos dados retornados pelo sistema, como a disponibilidade do livro, o local onde o mesmo esta armazenando, e ou outras informações do livro, como sinopse, autor, edição, tempo de espera para caso o livro esteja indisponível.
+		1.2.3. Avaliação: O usuário compara as informações recebidas com a sua intenção inicial, formulada no golfo de execução (encontrar informações sobre o livro). Se o sistema tiver o retorno esperado a avaliação sera positiva.
+	
+2. Um usuário tirar uma foto com seu celular e postar em uma rede social
+	2.1. Golfo de Execução.
+		2.1.1 Formulação da intenção: O usuário decide que quer tirar uma foto e posta-la em uma sua rede social para que outras pessoas possam ver.
+		2.1.2 Especificação da sequencia de ações: O usuário define a sequencia de açẽos, como abrir a câmera do celular, encontrar um angulo ideal, tirar a foto, abrir o aplicativo da rede social e escolher qual foto deseja postar.
+		2.1.3 Execução: O usuário tira a foto, abre o aplicativo da respectiva rede social, seleciona a foto, escreve alguma legenda, ou não escreve nada, clica em publicar a foto e aguarda que a mesma seja publicada apos seu carregamento.
+	2.2. Golfo de Avaliação.
+		2.2.1. Percepção: O usuário recebe uma resposta visual da foto postada em sua linha do tempo, e pode verificar o número de curtidas e comentários, além de poder consultar se a postagem foi realizada corretamente.
+		2.2.2. Interpretação: O usuário interpreta o retorno visual, verificando o engajamento que sua foto teve, através dos números de curtidas, comentários e ou compartilhamentos, que confirma se a foto realmente foi postada.
+		2.2.3. Avaliação: O usuário avalia se o resultado corresponde com suas expectativas (se a foto foi postada correamente e teve a resposta esperada dos amigos ou seguidores).
+
