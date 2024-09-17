@@ -63,3 +63,250 @@ ____________  * id
 
 // Kevin Ryan um dos criadores do MOngoDB
 
+
+// Sempre quem recebe no maximo 1 (0, 1), recebe a foreing Key - ESSA AFIRMAÇÃO É PARA O BD Relacional
+
+// 1 - N
+// * - Uma collection para cada entidade e relacionar uma a outra
+
+[ // Collection Produto
+  {
+  _id: 324,
+  nome: "Sabonete de Orquideas",
+  preco: 14.90
+  }
+]
+
+[ // Collection Marca
+  {
+    _id: 3,
+    descricao: "Palmolive"
+  }
+]
+
+
+// Como relacionar?
+
+// -> Siga a regra de Negocio!
+
+// Exemplo 1:
+
+[
+  {
+    _id: 324,
+    nome: "Sabonete de Orquideas",
+    preco: 14.90,
+    marca: 3
+  }
+]
+
+
+
+// Exemplo 2:
+[
+  {
+    _id: 3,
+    descricao: "Palmolive",
+    produtos: [324]
+  }
+]
+
+
+// * Aninhar a collection
+
+// Exemplo 1:
+[
+  {
+    _id:324,
+    nome: "Sabonete de Orquideas",
+    preco: 14.90,
+    marca:{
+      _id: 3,
+      descricao: "Palmolive"
+    }
+  }
+]
+
+
+// N-N 
+
+____________  * cpf	
+|  Paciente| - nome
+------------ 
+    | (1, N)
+    |
+  ______  - data inicio 
+ |<Item>| - status        // Entidade associativa (bandeirinha do Brasil)
+  ------
+    |
+    | (0, N)
+____________  * id	
+| Convenio | - descricao
+------------
+
+| Paciente |           | PacienteConvenio |           | Paciente |              
+ ----------            -------------------             ----------                       
+| CPF (pk) |   -->     | CPF (fk)         |    <--    | ID (pk)  |
+| nome     |           | IdConv (fk)      |           | descricao|
+|          |           | inicio           |           |          |
+|          |           | status           |           |          |
+
+
+[ // Collection convenio
+  {
+    _id: 492,
+    descricao: "Unimed"
+  },
+  {
+    _id: 521,
+    descricao: "Bradesco Saude"
+  }
+]
+
+[ // Collection Paciente
+  {
+    cpf: "123.456.789.01",
+    nome: "Marina Lopes",
+    convenios: 
+    [
+      {
+        convenio 492,
+        data: "2018-04-03",
+        ativo: false
+      },
+      {
+        convenio: 521,
+        data: 2024-08-01,
+        ativo: true
+      }
+    ]
+  }
+]
+
+
+
+
+/****************** SEGUNDA PARTE*****************/
+
+/*
+$lookup
+
+Operador para relacionar documentosde diferentes coleções.
+Equivalente ao "JOIN" no SQL
+
+Estados 
+[
+  {
+    _id,
+    codigo_uf,
+    nome,
+    local
+  }
+]
+
+Municipios
+[
+  {
+    _id,
+    codigo_ibge,
+    nome,
+    capital,
+    codigo_uf
+    local
+  }
+]
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Vamos explicar passo a passo o que está acontecendo no seu código e nos diagramas, destacando as representações gráficas e como essas relações são modeladas em bancos de dados relacionais e não-relacionais.
+
+---
+
+### 1. **Modelagem de Dados Não Relacionais: Relação 1-1 (Palestra e Palestrante)**
+
+Neste primeiro caso, temos duas entidades: **Palestra** e **Palestrante**. 
+
+#### Representação Gráfica:
+- A entidade **Palestra** contém o atributo `id` (chave primária) e o `titulo`.
+- A entidade **Palestrante** contém o atributo `cpf` (chave primária) e o `nome`.
+- A relação entre **Palestra** e **Palestrante** é de 1 para 1, o que significa que cada palestra tem um palestrante exclusivo.
+
+##### Abordagens para representar isso em um banco NoSQL (MongoDB):
+
+- **Referenciar documentos**: As duas entidades são armazenadas em coleções separadas. Na coleção **Palestrante**, um campo de chave estrangeira `idPalestra` faz referência ao documento da coleção **Palestra**, vinculando um palestrante a uma palestra.
+  
+- **Aninhar documentos**: Uma abordagem alternativa é aninhar o documento do palestrante dentro do documento da palestra. Isso significa que todos os dados do palestrante são armazenados diretamente no documento da palestra. Não há necessidade de referência cruzada entre coleções, o que pode ser útil quando os dados são frequentemente acessados juntos.
+
+---
+
+### 2. **Modelagem de Dados Não Relacionais: Relação 1-N (Produto e Marca)**
+
+Aqui, temos duas entidades: **Produto** e **Marca**.
+
+#### Representação Gráfica:
+- A entidade **Produto** contém o atributo `id` (chave primária), `nome` e `preço`.
+- A entidade **Marca** contém o atributo `id` (chave primária) e `descrição`.
+- A relação entre **Produto** e **Marca** é de 1 para N, ou seja, uma marca pode ter vários produtos, mas um produto pertence a uma única marca.
+
+##### Como representar isso no MongoDB:
+
+- **Referenciar documentos**: Na coleção de **Produtos**, existe um campo `marca`, que contém o identificador da marca correspondente. Dessa forma, a coleção **Produto** armazena uma referência para o documento da marca.
+  
+- **Aninhar documentos**: Outra abordagem é armazenar as informações da marca dentro do próprio documento de produto. Isso significa que o documento de **Produto** terá todos os dados da marca aninhados diretamente, evitando a necessidade de uma consulta adicional para buscar os dados da marca.
+
+Essa prática de aninhamento, no entanto, pode ser um **anti-padrão NoSQL** se os dados da marca forem frequentemente modificados ou acessados independentemente dos produtos.
+
+---
+
+### 3. **Modelagem de Dados Não Relacionais: Relação N-N (Paciente e Convênio)**
+
+Este exemplo envolve três entidades: **Paciente**, **Item** (ou **PacienteConvenio**, que é uma entidade associativa), e **Convênio**.
+
+#### Representação Gráfica:
+- A entidade **Paciente** contém o atributo `cpf` (chave primária) e `nome`.
+- A entidade associativa **Item** ou **PacienteConvenio** armazena os atributos que descrevem o relacionamento entre **Paciente** e **Convênio**, como `data inicio` e `status` do convênio.
+- A entidade **Convênio** contém o atributo `id` (chave primária) e `descrição`.
+- A relação entre **Paciente** e **Convênio** é de N para N. Isso significa que um paciente pode estar associado a múltiplos convênios ao longo do tempo, e um convênio pode ter vários pacientes.
+
+##### Como isso seria representado no MongoDB:
+
+- **Referenciar documentos**: Uma abordagem seria armazenar a lista de convênios dentro do documento do paciente. No campo `convenio`, o paciente teria uma lista de convênios, cada um com sua `data` de início e o `status` (se está ativo ou inativo).
+  
+  Exemplo: No documento do paciente **Marina Lopes**, há uma lista de convênios. O primeiro convênio (`Unimed`) foi iniciado em 2018 e está inativo, enquanto o segundo convênio (`Bradesco Saúde`) começou em 2024 e está ativo.
+
+Esse tipo de modelagem é eficiente para representar relacionamentos N-N no MongoDB, onde é possível listar múltiplas associações entre pacientes e convênios diretamente no documento do paciente.
+
+---
+
+### 4. **Entidades Associativas e a Relação N-N (Paciente e Convênio)**
+
+A entidade associativa **Item** (ou **PacienteConvenio**) é uma forma de representar a relação N-N entre **Paciente** e **Convênio**. Ela funciona como uma tabela intermediária (ou documento intermediário, no caso do MongoDB), que conecta os pacientes com seus respectivos convênios, adicionando informações como data de início e status do convênio.
+
+#### Representação Gráfica:
+- A entidade **Paciente** é ligada à entidade associativa **Item**, que por sua vez está ligada à entidade **Convênio**.
+- A entidade associativa armazena dados como a data de início do convênio e o status (se ativo ou não).
+  
+No banco NoSQL, isso pode ser representado aninhando as associações de convênios dentro do documento de **Paciente**, sem a necessidade de uma entidade associativa separada como em bancos relacionais tradicionais. No entanto, se os dados forem mais complexos ou houver necessidade de consultas independentes dos convênios, essa entidade associativa pode ser representada como uma coleção separada.
+
+---
+
+### Conclusão
+
+A modelagem de dados em sistemas não relacionais como o MongoDB oferece maior flexibilidade para modelar relacionamentos entre entidades. Existem basicamente duas abordagens principais: **referenciar documentos** (semelhante a chaves estrangeiras em bancos relacionais) ou **aninhamento de documentos** (onde todos os dados relacionados são armazenados no mesmo documento). A escolha entre uma abordagem ou outra depende da frequência de acesso aos dados e da natureza do relacionamento entre as entidades. Relacionamentos mais complexos, como N-N, podem ser modelados eficientemente aninhando as informações diretamente ou usando entidades associativas dependendo do contexto.
+*/
+
+
