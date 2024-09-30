@@ -30,7 +30,7 @@ use('ExercicioRestaurantes');
 // << B >>
 // Conta o número total de documentos na coleção 'restaurantes'.
 // A consulta `find({}, {})` retorna todos os documentos e `.count()` conta quantos documentos existem. O número esperado é 3772.
-db.restaurantes.find({},{}).count(); //3772
+db.restaurantes.find({},{}).count(); //3772 
 
 
 // Alterna para o banco de dados 'ExercicioRestaurantes'.
