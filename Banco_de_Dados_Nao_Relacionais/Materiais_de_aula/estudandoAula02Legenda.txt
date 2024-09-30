@@ -1,0 +1,100 @@
+/* Legenda dos comandos MongoDB usados:
+
+use('aula02')
+// O comando `use('aula02')` seleciona o banco de dados "aula02" para que todas as operações seguintes sejam executadas nesse banco.
+
+db.receitas.insertOne()
+// O comando `insertOne()` insere um único documento na coleção especificada. Os campos do documento são passados como argumento.
+
+db.receitas.find()
+// O comando `find()` realiza consultas na coleção, retornando todos os documentos, a menos que filtros e projeções sejam aplicados.
+
+db.receitas.find({}, {})
+// O comando `find({filtros}, {projecao})` retorna documentos baseados nos filtros fornecidos e somente os campos especificados na projeção.
+
+db.receitas.find({nome:1, preco:1})
+// O comando `find({filtros}, {projecao})` com uma projeção que especifica quais campos devem ser retornados, neste caso, apenas "nome" e "preco".
+
+db.receitas.find({vegetariano: true})
+// Realiza uma consulta com um filtro onde o campo "vegetariano" é igual a true.
+
+db.receitas.find({nome: /costela/i})
+// Consulta documentos cujo campo "nome" corresponde à expressão regular `/costela/i`, que busca por "costela", ignorando maiúsculas e minúsculas.
+
+db.receitas.find({preco: {$gt: 20.00}})
+// Consulta que usa o operador `$gt` (greater than, maior que), retornando documentos onde o preço é maior que 20.00.
+
+db.receitas.find({preco: {$gte: 15.00, $lte: 30.00}})
+// Consulta com os operadores `$gte` (maior ou igual) e `$lte` (menor ou igual), retornando documentos com preço entre 15 e 30.
+
+db.receitas.find({$and: [...]})
+// O operador lógico `$and` realiza uma consulta onde todas as condições dentro do array devem ser satisfeitas.
+
+db.receitas.find({$or: [...]})
+// O operador lógico `$or` retorna documentos onde pelo menos uma das condições do array é satisfeita.
+
+db.receitas.find({$nor: [...]})
+// O operador lógico `$nor` retorna documentos que não satisfazem nenhuma das condições especificadas.
+
+db.receitas.updateOne()
+// O comando `updateOne()` atualiza o primeiro documento que satisfaz os critérios de filtro. Usa operadores como `$set` para modificar campos específicos.
+
+db.receitas.updateMany()
+// O comando `updateMany()` atualiza todos os documentos que atendem ao filtro fornecido.
+
+db.receitas.deleteOne()
+// O comando `deleteOne()` remove o primeiro documento que atende ao critério de filtro.
+
+db.receitas.deleteMany()
+// O comando `deleteMany()` remove todos os documentos que atendem ao critério de filtro.
+
+$set
+// O operador `$set` é utilizado para modificar ou adicionar um campo a um documento existente.
+
+$unset
+// O operador `$unset` remove o campo especificado de um documento.
+
+$push
+// O operador `$push` adiciona um novo valor a um array existente em um documento.
+
+$pull
+// O operador `$pull` remove um valor específico de um array.
+
+$inc
+// O operador `$inc` incrementa (ou decrementa) o valor de um campo numérico.
+
+$eq
+// O operador `$eq` é usado para verificar se um campo é igual a um determinado valor.
+
+$ne
+// O operador `$ne` é usado para verificar se um campo é diferente de um determinado valor.
+
+$gt
+// O operador `$gt` verifica se o valor de um campo é maior que o valor especificado.
+
+$lt
+// O operador `$lt` verifica se o valor de um campo é menor que o valor especificado.
+
+$gte
+// O operador `$gte` verifica se o valor de um campo é maior ou igual ao valor especificado.
+
+$lte
+// O operador `$lte` verifica se o valor de um campo é menor ou igual ao valor especificado.
+
+$and
+// O operador `$and` é usado para combinar múltiplas condições que todas devem ser verdadeiras.
+
+$or
+// O operador `$or` é usado para combinar múltiplas condições onde pelo menos uma deve ser verdadeira.
+
+$nor
+// O operador `$nor` combina múltiplas condições e retorna documentos que não atendem a nenhuma delas.
+
+ObjectId()
+// O método `ObjectId()` cria ou manipula um identificador único para documentos no MongoDB. Usado para documentos onde o `_id` é gerado automaticamente.
+
+new Date()
+// O comando `new Date()` gera a data e hora atual no formato de objeto `Date` no MongoDB.
+
+*/
+
