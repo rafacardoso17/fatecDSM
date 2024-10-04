@@ -1,0 +1,22 @@
+.card-content
+{
+  margin-top: 65px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.truncated-text{
+  max-width: 140px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.truncated-text:hover{
+  overflow: visible;
+  white-space: normal;
+}

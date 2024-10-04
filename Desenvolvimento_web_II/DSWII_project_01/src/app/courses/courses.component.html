@@ -1,1 +1,14 @@
-<p>courses works!</p>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-2 card-content" *ngFor="let course of courses">
+    <div class="card" style="width: 18rem;">
+      <img src="{{course.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{course.title}}</h5>
+        <p class="card-text truncated-text">{{course.description}}</p>
+        <a routerLink="/course-details" class="btn btn-primary">Saiba + ou -</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
