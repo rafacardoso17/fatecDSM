@@ -1,2 +1,6 @@
 root@rafael-x510ur:/home/rafael/Documentos/Repositories/fatecDSM# sudo systemctl start mongod
 root@rafael-x510ur:/home/rafael/Documentos/Repositories/fatecDSM# sudo systemctl status mongod
+
+sudo systemctl enable mongod
+sudo systemctl disable mongod
+

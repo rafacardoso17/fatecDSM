@@ -264,3 +264,5 @@ db.restaurantes.find({
         }
     }
 })
+use('ExercicioRestaurantes')
+db.restaurantes.find().limit(1)
