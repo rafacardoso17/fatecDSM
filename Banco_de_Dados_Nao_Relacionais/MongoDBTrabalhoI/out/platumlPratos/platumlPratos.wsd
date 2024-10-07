@@ -1,0 +1,247 @@
+@startjson
+[
+    {
+
+        "preco": 28.90,
+
+        "descricao": "Espaguete ao molho de camarão com tempero caseiro.",
+
+        "nome": "Espaguete ao Camarão",
+
+        "id_restaurante": "66f206e4054b2f6345c63648"
+
+    },
+
+    {
+
+        "preco": 15.00,
+
+        "descricao": "Torta de frango com requeijão e massa folhada crocante.",
+
+        "nome": "Torta de Frango",
+
+        "id_restaurante": "66f206e4054b2f6345c63649"
+
+    },
+
+    {
+
+        "preco": 35.90,
+
+        "descricao": "Filé de peixe grelhado com alcaparras e purê de batata.",
+
+        "nome": "Filé de Peixe Grelhado",
+
+        "id_restaurante": "66f206e4054b2f6345c6364b"
+
+    },
+
+    {
+
+        "preco": 22.50,
+
+        "descricao": "Hambúrguer artesanal com cheddar, bacon e cebola caramelizada.",
+
+        "nome": "Hambúrguer Bacon Cheddar",
+
+        "id_restaurante": "66f206e4054b2f6345c6364d"
+
+    },
+
+    {
+
+        "preco": 40.00,
+
+        "descricao": "Costela suína ao molho barbecue com batatas assadas.",
+
+        "nome": "Costela Barbecue",
+
+        "id_restaurante": "66f206e4054b2f6345c6364f"
+
+    },
+
+    {
+
+        "preco": 18.90,
+
+        "descricao": "Salada tropical com frutas frescas, folhas verdes e molho agridoce.",
+
+        "nome": "Salada Tropical",
+
+        "id_restaurante": "66f206e4054b2f6345c63648"
+
+    },
+
+    {
+
+        "preco": 23.00,
+
+        "descricao": "Risoto de cogumelos frescos com parmesão ralado na hora.",
+
+        "nome": "Risoto de Cogumelos",
+
+        "id_restaurante": "66f206e4054b2f6345c63649"
+
+    },
+
+    {
+
+        "preco": 26.50,
+
+        "descricao": "Pizza de calabresa com cebola e azeitonas pretas.",
+
+        "nome": "Pizza Calabresa",
+
+        "id_restaurante": "66f206e4054b2f6345c6364b"
+
+    },
+
+    {
+
+        "preco": 32.00,
+
+        "descricao": "Carne de sol com macaxeira e manteiga de garrafa.",
+
+        "nome": "Carne de Sol com Macaxeira",
+
+        "id_restaurante": "66f206e4054b2f6345c6364d"
+
+    },
+
+    {
+
+        "preco": 14.90,
+
+        "descricao": "Coxinha de frango com massa crocante e recheio cremoso.",
+
+        "nome": "Coxinha de Frango",
+
+        "id_restaurante": "66f206e4054b2f6345c6364f"
+
+    },
+
+    {
+
+        "preco": 19.50,
+
+        "descricao": "Sopa de legumes com carne desfiada, servida com torradas.",
+
+        "nome": "Sopa de Legumes com Carne",
+
+        "id_restaurante": "66f206e4054b2f6345c63648"
+
+    },
+
+    {
+
+        "preco": 17.00,
+
+        "descricao": "Pastel de queijo com massa fina e crocante.",
+
+        "nome": "Pastel de Queijo",
+
+        "id_restaurante": "66f206e4054b2f6345c63649"
+
+    },
+
+    {
+
+        "preco": 45.00,
+
+        "descricao": "Picanha grelhada com arroz, feijão e batata frita.",
+
+        "nome": "Picanha Grelhada",
+
+        "id_restaurante": "66f206e4054b2f6345c6364b"
+
+    },
+
+    {
+
+        "preco": 11.50,
+
+        "descricao": "Crepe de presunto e queijo, servido com salada.",
+
+        "nome": "Crepe de Presunto e Queijo",
+
+        "id_restaurante": "66f206e4054b2f6345c6364d"
+
+    },
+
+    {
+
+        "preco": 29.90,
+
+        "descricao": "Lombo suíno assado com molho de laranja e batatas.",
+
+        "nome": "Lombo Assado",
+
+        "id_restaurante": "66f206e4054b2f6345c6364f"
+
+    },
+
+    {
+
+        "preco": 38.50,
+
+        "descricao": "Moqueca de peixe com camarão, servida com arroz e farofa.",
+
+        "nome": "Moqueca de Peixe",
+
+        "id_restaurante": "66f206e4054b2f6345c63648"
+
+    },
+
+    {
+
+        "preco": 20.90,
+
+        "descricao": "Escondidinho de carne seca com purê de mandioca.",
+
+        "nome": "Escondidinho de Carne Seca",
+
+        "id_restaurante": "66f206e4054b2f6345c63649"
+
+    },
+
+    {
+
+        "preco": 24.90,
+
+        "descricao": "Nhoque de batata com molho quatro queijos.",
+
+        "nome": "Nhoque Quatro Queijos",
+
+        "id_restaurante": "66f206e4054b2f6345c6364b"
+
+    },
+
+    {
+
+        "preco": 27.00,
+
+        "descricao": "Frango à parmegiana com arroz branco e batata frita.",
+
+        "nome": "Frango à Parmegiana",
+
+        "id_restaurante": "66f206e4054b2f6345c6364d"
+
+    },
+
+    {
+
+        "preco": 33.90,
+
+        "descricao": "Polvo grelhado com legumes assados e molho pesto.",
+
+        "nome": "Polvo Grelhado",
+
+        "id_restaurante": "66f206e4054b2f6345c6364f"
+
+    }
+
+]
+ 
+@endjson
+
+ 

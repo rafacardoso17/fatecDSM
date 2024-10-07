@@ -1,0 +1,134 @@
+@startjson
+[
+    {   
+        "cnpj": "12.345.678/0001-01",
+        "nome": "Sabor de Vô",
+        "id_usuario": "user_001",
+        "cep": "18055-170",
+        "imagem": "https://example.com/imagemA.jpg",
+        "numero": 1,
+        "local": {
+            "type": "Point",
+            "coordinates": [-47.490780, -23.502140],
+            "rua": "Alameda das Primaveras"
+        }
+    },
+    {
+        "cnpj": "98.765.432/0001-02",
+        "nome": "Hiro San Sushi & Asian Food",
+        "id_usuario": "user_002",
+        "cep": "18030-000",
+        "imagem": "https://example.com/imagemB.jpg",
+        "numero": 2,
+        "local": {
+            "type": "Point",
+            "coordinates": [-47.464056, -23.512225],
+            "rua": "Avenida Barão de Tatuí"
+        }
+    },
+    {
+        "cnpj": "34.567.890/0001-03",
+        "nome": "Coreto",
+        "id_usuario": "user_003",
+        "cep": "18050-003",
+        "imagem": "https://example.com/imagemC.jpg",
+        "numero": 3,
+        "local": {
+            "type": "Point",
+            "coordinates": [-47.485420, -23.469996],
+            "rua": "Praça Laudelino Amaral"
+        }
+    },
+    {
+        "cnpj": "21.098.765/0001-04",
+        "nome": "Gastronomia do Sol",
+        "id_usuario": "user_004",
+        "cep": "18100-004",
+        "imagem": "https://example.com/imagemD.jpg",
+        "numero": 4,
+        "local": {
+            "type": "Point",
+            "coordinates": [-47.458386, -23.502057],
+            "rua": "Rua Santa Clara"
+        }
+    },
+    {
+        "cnpj": "43.210.987/0001-05",
+        "nome": "Recanto da Saborosa",
+        "id_usuario": "user_005",
+        "cep": "18200-005",
+        "imagem": "https://example.com/imagemE.jpg",
+        "numero": 5,
+        "local": {
+            "type": "Point",
+            "coordinates": [-48.050452, -23.588999],
+            "rua": "Rua Dr. Campos Salles"
+        }
+    },
+    {
+        "cnpj": "76.543.210/0001-06",
+        "nome": "Habibs - Wanel Ville",
+        "id_usuario": "user_006",
+        "cep": "18055-900",
+        "imagem": "https://example.com/imagemF.jpg",
+        "numero": 6,
+        "local": {
+            "type": "Point",
+            "coordinates": [-47.510772, -23.486602],
+            "rua": "Av. Elias Maluf"
+        }
+    },
+    {
+        "cnpj": "32.145.678/0001-07",
+        "nome": "Restaurante Colher de Pau",
+        "id_usuario": "user_007",
+        "cep": "18075-210",
+        "imagem": "https://example.com/imagemG.jpg",
+        "numero": 7,
+        "local": {
+            "type": "Point",
+            "coordinates": [-47.473331, -23.476633],
+            "rua": "Rua Jaír Soares"
+        }
+    },
+    {
+        "cnpj": "87.654.321/0001-08",
+        "nome": "La Doc Gastronomia",
+        "id_usuario": "user_008",
+        "cep": "18047-770",
+        "imagem": "https://example.com/imagemH.jpg",
+        "numero": 8,
+        "local": {
+            "type": "Point",
+            "coordinates": [-47.464617, -23.529056],
+            "rua": "Rua Francisco Moron Fernandes"
+        }
+    },
+    {
+        "cnpj": "11.223.344/0001-09",
+        "nome": "Kostela do Japones Eden",
+        "id_usuario": "user_009",
+        "cep": "18086-390",
+        "imagem": "https://example.com/imagemI.jpg",
+        "numero": 9,
+        "local": {
+            "type": "Point",
+            "coordinates": [-47.436351, -23.433720],
+            "rua": "Av. Victor Andrew"
+        }
+    },
+    {
+        "cnpj": "55.667.788/0001-10",
+        "nome": "Restaurante e Churrascaria Sabores da Carne",
+        "id_usuario": "user_010",
+        "cep": "18560-000",
+        "imagem": "https://example.com/imagemJ.jpg",
+        "numero": 10,
+        "local": {
+            "type": "Point",
+            "coordinates": [-47.625836, -23.405326],
+            "rua": "Av. Paulo Antunes Moreira"
+        }
+    }
+]
+@endjson
