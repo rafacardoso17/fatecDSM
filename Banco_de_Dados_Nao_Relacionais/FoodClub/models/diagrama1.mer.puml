@@ -9,36 +9,52 @@ entity "Restaurante" as restaurante {
     + cozinha: String
     + local: Point
 }
- 
+
 entity "Prato" as prato {
     + id: String
     + nome: String
     + preco: Float
     + descricao: String
 }
- 
+
 entity "Entrada" as entrada {
     + id: String
     + nome: String
     + preco: Float
     + descricao: String
 }
- 
+
 entity "Principal" as principal {
     + id: String
     + nome: String
     + preco: Float
     + descricao: String
 }
- 
+
 entity "Sobremesa" as sobremesa {
     + id: String
     + nome: String
     + preco: Float
     + descricao: String
 }
- 
+
+entity "Bebida Quente" as bebida_quente {
+    + id: String
+    + nome: String
+    + preco: Float
+    + descricao: String
+}
+
+entity "Bebida Fria" as bebida_fria {
+    + id: String
+    + nome: String
+    + preco: Float
+    + descricao: String
+}
+
 restaurante --{ prato : "id_restaurante" -> "id"
+restaurante --{ bebida_quente : "id_restaurante" -> "id"
+restaurante --{ bebida_fria : "id_restaurante" -> "id"
 prato --{ entrada : "pratoId" -> "id"
 prato --{ principal : "pratoId" -> "id"
 prato --{ sobremesa : "pratoId" -> "id"
