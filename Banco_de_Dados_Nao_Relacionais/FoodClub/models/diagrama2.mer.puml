@@ -1,0 +1,70 @@
+@startuml
+entity "Funcionario" {
+    *ID_Funcionario
+    --
+    Nome_Funcionario
+}
+
+entity "Usuario" {
+    *ID_Usuario
+    --
+    Tipo_Usuario
+    Senha
+    Email
+}
+
+entity "Empresa" {
+    *ID_Empresa
+    --
+    Nome_Empresa
+    CNPJ
+    Rua
+    Numero
+    Cidade
+    Estado
+}
+
+entity "Restaurante" {
+    *ID_Restaurante
+    --
+    Nome_Restaurante
+    CNPJ
+    Rua
+    Numero
+    Cidade
+    Estado
+}
+
+entity "Prato" {
+    *ID_Prato
+    --
+    Nome_Prato
+    Descricao_Prato
+    Preco
+}
+
+entity "Pedido" {
+    *ID_Pedido
+    --
+    Valor_Pedido
+    ID_Funcionario
+    ID_Restaurante
+    Pratos: [ID_Prato] // Lista de pratos no pedido
+}
+
+entity "Log" {
+    *ID_Log
+    --
+    Tipo_Acao
+    Usuario: ID_Usuario
+    Timestamp
+}
+
+Empresa o-- Usuario: "Possui"
+Restaurante o-- Prato: "Disponibiliza"
+Usuario o-- Pedido: "Realiza"
+Funcionario o-- Pedido: "Realiza"
+Pedido o-- Prato: "Contem"
+Empresa o-- Restaurante: "Contem"
+Usuario o-- Log: "Gera"
+@enduml
